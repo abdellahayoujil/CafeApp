@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CafeApp</string>
+    <string name="menu_title">Cafe Menu</string>
+    <string name="quantity_hint">Quantity</string>
+    <string name="total_text">Total: %s MAD</string>
+    <string name="print_invoice">Print Invoice</string>
+    <string name="clear_button">Clear</string>
+    <string name="reset_total">Reset Total</string>
+</resources>

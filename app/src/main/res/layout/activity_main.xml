@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5572727">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/menuTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:fontFamily="cursive"
+            android:text="@string/menu_title"
+            android:textColor="#FFFFFF"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <GridView
+            android:id="@+id/menuGridView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/menuTextView"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="16dp"
+            android:horizontalSpacing="16dp"
+            android:numColumns="2"
+            android:verticalSpacing="16dp" />
+
+        <EditText
+            android:id="@+id/quantityEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/menuGridView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:ems="8"
+            android:gravity="center"
+            android:hint="@string/quantity_hint"
+            android:inputType="number"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/totalPriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quantityEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="@string/total_text"
+            android:textColor="#4CAF50"
+            android:textSize="35sp" />
+
+        <LinearLayout
+            android:id="@+id/buttonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/totalPriceTextView"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="13dp">
+
+            <Button
+                android:id="@+id/printInvoiceButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FF9800"
+                android:onClick="imprimerFacture"
+                android:text="@string/print_invoice" />
+
+            <Button
+                android:id="@+id/clearButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#F44336"
+                android:onClick="viderFacture"
+                android:text="@string/clear_button" />
+
+            <Button
+                android:id="@+id/resetTotalButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#00BCD4"
+                android:onClick="reinitialiserTotal"
+                android:text="@string/reset_total" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/invoiceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonsLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/r_fac"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+</ScrollView>
